@@ -110,4 +110,12 @@ example usage `CUDA_VISIBLE_DEVICES=0 python run_summarization.py --model_name_o
 
 We have modified the model file to extend the input truncation for BART to more than 1024 tokens (default). You may use our modified file in `summarization/absractive/modeling_utils.py` to replace the file https://github.com/huggingface/transformers/blob/master/src/transformers/modeling_utils.py if you wish to read more than 1024 tokens in the source and specify the truncation length by `--max_source_length <length>` when running the training script. The specific section we modified are commented with `# MReD` in `modeling_utils.py`.
 
-
+## Cite Us
+```
+@article{shen2021mred,
+  title={MReD: A Meta-Review Dataset for Controllable Text Generation},
+  author={Shen, Chenhui and Cheng, Liying and Zhou, Ran and Bing, Lidong and You, Yang and Si, Luo},
+  journal={arXiv preprint arXiv:2110.07474},
+  year={2021}
+}
+```

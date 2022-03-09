@@ -1,12 +1,9 @@
 
-TODO: whether to provide confidence score information
-
-## Repo Content
 We provide the full MReD data and its related code.
 For more details please refer to the paper: https://openreview.net/forum?id=B9uusKRCTo_
 
 <!-- INFO -->
-### 1. Data Information
+## 1. Data Information
 The `full_data_info.txt` file contains detailed information for the train, validation and test data splits for both classification and summarization tasks.
 Each line have 12 fields separated by tab refering to the following information for the same paper:
 * **data split**: `val`, `test` or `train`
@@ -25,11 +22,11 @@ Each line have 12 fields separated by tab refering to the following information 
 The filtered_{train}
 
 <!-- CLASSIFICATION -->
-### 2. Classification
-##### a. Data
+## 2. Classification
+### a. Data
 In the folder `classification/data/`, we provide the human-annotated category label for every sentence in all meta-reviews. Each line contains three fields, namely **paper id**, **sentence**, and **label**, separated by tab. Consecutive meta-reviews are separated by an additional new line. You may search the **paper id** in `full_data_info.txt` for more information on a particular paper/submission.
 
-##### b. Code
+### b. Code
 The code for training the classifier is adapted from: https://github.com/allanj/pytorch_neural_crf.
 Using Roberta-base, our trained model has a classification accuracy of 85.83%.
 We include the our modified code in folder `classification/LSTM-CRF`.
@@ -42,9 +39,9 @@ Prediction results are save to `classification/LSTM-CRF/results/`. To obtain the
 
 
 <!-- SUMMARIZATION -->
-### 3. Summarization
-#### Extractive summarization
-##### a. Data
+## 3. Summarization
+### Extractive summarization
+#### a. Data
 We provide the full data of each paper reviews and metareviews in the source folder `summarization/extractive/data/source` and target folder `summarization/extractive/data/target` respectively, where each line represents the review or the meta-review passage in correspondence. The details of each paper can be found in `full_data_info.txt` following the file order. 
 
 The target folder contains the following:
@@ -66,7 +63,7 @@ Moreover, we provide the classifier labeled (85.83% accuracy) per-sentence categ
 * the filtered paper for meta-review length between 20-400 `filtered_{train,val,test}_labeled_sentences.txt`
 * the filtered low score (<=3) and high score (>=7) paper labeled source inputs: `filtered_{train,val,test}_labeled_sentences_low_score.txt` and `filtered_{train,val,test}_labeled_sentences_high_score.txt`. 
 
-##### b. Code
+#### b. Code
 We provide code for the three exractive models and the generic baselines in our paper under the directory  `summarization/extractive/code/`.
 * **Lexrank**: in folder `lexrank_model/`, based on the package: https://pypi.org/project/lexrank/. We extract the top n most relevant items from src, where n is decided according to the actual number of sentences in gold. The vanilla and labeled-controlled extractive summarization scripts are `lexrank_base.py` and `lexrank_control.py`. Need to run `pip install lexrank`.
 * **Textrank**: in folder `textrank_model/`,based on the gensim.summarization.summarizer https://radimrehurek.com/gensim_3.8.3/summarization/summariser.html. We use textrank to extract the top n most relevant items from src, where n is decided according to the actual number of sentences in gold. The vanilla and labeled-controlled extractive summarization scripts are `textrank_base.py` and `textrank_control.py`. Need to run `pip install gensim==3.8.3`.
@@ -83,8 +80,8 @@ The rouge score evaluation script is included as `eval_rouge.py`. Use `python ev
 
 The script for linearization to obtain the `merge/` data is also included as `merge.py`.
 
-#### Abstractive summarization
-##### a. Data
+### Abstractive summarization
+#### a. Data
 For vanilla generations, we include data in `summarization/absractive/filtered_uncontrolled_data/` with names according to different source linearizaton methods:
 * concat: `{train, val, test}_concat.csv`
 * rate-concat: `{train, val, test}_rate_concat.csv`
@@ -97,7 +94,7 @@ For label controlled generation, we include data in `summarization/absractive/fi
 * segment control: file ending with `_seg-ctrl.csv`
 
 
-##### b. Code
+#### b. Code
 We use the example code in Transformers https://github.com/huggingface/transformers/blob/master/examples/pytorch/summarization/run_summarization.py. 
 Transformers version: "4.6.0.dev0"
 Simply download the code from the Transformers and follow the installation instructions. When running the training script, you need to:

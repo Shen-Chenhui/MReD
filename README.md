@@ -19,7 +19,6 @@ Each line have 12 fields separated by tab refering to the following information 
 * **sentence-level category sequence**: `[label1, label2, ... ]`, per-sentence label sequence for the meta-review where `label1` represents the category label for 1st sentence, `label2` for the 2nd sentence and so on
 * **segment-level category sequence**: `[label1, label2, ... ]`, label sequence for the meta-review on segment level where `label1` represents the category label for 1st segment (the sentences of the same label), `label2` for the 2nd segment and so on
 
-The filtered_{train}
 
 <!-- CLASSIFICATION -->
 ## 2. Classification

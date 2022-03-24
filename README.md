@@ -1,6 +1,6 @@
 
 We provide the full MReD data and its related code.
-For more details please refer to the paper: https://openreview.net/forum?id=B9uusKRCTo_
+For more details please refer to the paper: https://arxiv.org/abs/2110.07474
 
 <!-- INFO -->
 ## 1. Data Information

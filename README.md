@@ -96,6 +96,7 @@ For label controlled generation, we include data in `summarization/absractive/fi
 #### b. Code
 We use the example code in Transformers https://github.com/huggingface/transformers/blob/master/examples/pytorch/summarization/run_summarization.py. 
 Transformers version: "4.6.0.dev0"
+please install datasets with version 1.6.2
 Simply download the code from the Transformers and follow the installation instructions. When running the training script, you need to:
 * specify the data file path by `--train_file <train_file_path> --validation_file <val_file_path> --test_file <test_file_path>`
 * specify the maximum and minimun target generation length (if using filtered files) by `--max_target_length 400 --gen_target_min 20`

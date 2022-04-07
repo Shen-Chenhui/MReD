@@ -109,10 +109,10 @@ We have modified the model file to extend the input truncation for BART to more 
 
 ## Cite Us
 ```
-@article{shen2021mred,
-  title={MReD: A Meta-Review Dataset for Controllable Text Generation},
+@article{shen2022mred,
+  title={MReD: A Meta-Review Dataset for Structure-Controllable Text Generation},
   author={Shen, Chenhui and Cheng, Liying and Zhou, Ran and Bing, Lidong and You, Yang and Si, Luo},
-  journal={arXiv preprint arXiv:2110.07474},
-  year={2021}
+  journal={Findings of ACL},
+  year={2022}
 }
 ```

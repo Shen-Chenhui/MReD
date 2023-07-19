@@ -115,10 +115,10 @@ You can quickly experience the generation quality of our model at https://colab.
 
 ## Cite Us
 ```
-@article{shen2022mred,
+@inproceedings{shen2022mred,
   title={MReD: A Meta-Review Dataset for Structure-Controllable Text Generation},
   author={Shen, Chenhui and Cheng, Liying and Zhou, Ran and Bing, Lidong and You, Yang and Si, Luo},
-  journal={Findings of ACL},
+  booktitle={Findings of ACL},
   year={2022}
 }
 ```

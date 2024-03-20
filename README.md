@@ -1,9 +1,7 @@
 
 We provide the full MReD data and its related code.
 
-For more details please refer to the paper: https://arxiv.org/abs/2110.07474
-
-We also have a live demo at: https://nlp.aliyun.com/mred
+For more details please refer to the paper: https://aclanthology.org/2022.findings-acl.198/
 
 <!-- INFO -->
 ## 1. Data Information
